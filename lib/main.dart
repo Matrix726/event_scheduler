@@ -36,26 +36,22 @@ class _MyApp extends State<MyApp> {
                 String newText= await Navigator.of(context).push(MaterialPageRoute(builder: (context)=>NewEventScreen()));
                 setState(() {
                   _list.add(
-                    Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Container(
-                        // height: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: kElevationToShadow[4],
-                        ),
-                        child:  Center(child: Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Text(
-                            newText,
-                            style: const TextStyle(
-                              fontSize: 17
-                            ),
-                          ),
-                        )),
+                    Container(
+                      margin: const EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: kElevationToShadow[4],
                       ),
-                    ),
+                      child: Center(
+                        child: Text(
+                          newText,
+                          textAlign: TextAlign.center,
+                          ),
+                      ),
+                      ),
+
                   );
                 });
               },
